@@ -11,6 +11,7 @@ $ git clone https://github.com/sunnypatel/vimPack ~/.vimPack
 ```
 	
 	And this to install everything:
+
 	```
 	$ cd ~/.vimPack
 	$ make
@@ -19,10 +20,14 @@ $ git clone https://github.com/sunnypatel/vimPack ~/.vimPack
 ## Shortcuts
 These are a few shortcuts added to the vimrc file, if you choose to use the one provided.
 
-Ctrl-n	create a new tab\n
-Ctrl-j	switch to next tab\n
-Ctrl-p	switch to prev tab\n
-Ctrl-d	Open/Close NERDTree\n
+Ctrl-n	create a new tab
+
+Ctrl-j	switch to next tab
+
+Ctrl-p	switch to prev tab
+
+Ctrl-d	Open/Close NERDTree
+
 
 ## Shoutouts
 
