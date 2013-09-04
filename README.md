@@ -18,13 +18,13 @@ $ make
 ## Shortcuts
 These are a few shortcuts added to the vimrc file, if you choose to use the one provided.
 
-Ctrl-n    	create a new tab
+Ctrl-n  -  	create a new tab
 
-Ctrl-j    	switch to next tab
+Ctrl-j  -  	switch to next tab
 
-Ctrl-p    	switch to prev tab
+Ctrl-p  -  	switch to prev tab
 
-Ctrl-d    	Open/Close NERDTree
+Ctrl-d  -  	Open/Close NERDTree
 
 
 ## Shoutouts
