@@ -1,7 +1,8 @@
 # VimPack
 
 vimPack is a very simple bash script which adds more simple IDE-like features to vim.
-VimPack uses vundle to install some pretty sweet plugins, which can make developers life easier but I am simply installing and configuring plugins others have created.  By no means do I take credit for any of the features provided.
+VimPack uses vundle to install some pretty sweet plugins,
+which can make developers life easier but I am simply installing and configuring plugins others have created.  By no means do I want to take credit for any of the features provided.
 
 ## Installation
 
@@ -18,13 +19,13 @@ $ make
 ## Shortcuts
 These are a few shortcuts added to the vimrc file, if you choose to use the one provided.
 
-Ctrl-n	create a new tab
+Ctrl-n  -  	create a new tab
 
-Ctrl-j	switch to next tab
+Ctrl-j  -  	switch to next tab
 
-Ctrl-p	switch to prev tab
+Ctrl-p  -  	switch to prev tab
 
-Ctrl-d	Open/Close NERDTree
+Ctrl-d  -  	Open/Close NERDTree
 
 
 ## Shoutouts
