@@ -6,9 +6,9 @@ VimPack uses vundle to install some pretty sweet plugins, which can make develop
 ## Installation
 
 Since it's just a bash script, simply run to clone:
-	```
-	$ git clone https://github.com/sunnypatel/vimPack ~/.vimPack
-	```
+```
+$ git clone https://github.com/sunnypatel/vimPack ~/.vimPack
+```
 	
 	And this to install everything:
 	```
@@ -16,16 +16,17 @@ Since it's just a bash script, simply run to clone:
 	$ make
 	```
 
-## Shortcuts added
+## Shortcuts
+These are a few shortcuts added to the vimrc file, if you choose to use the one provided.
 
-Ctrl-n	create a new tab
-Ctrl-j	switch to next tab
-Ctrl-p	switch to prev tab
-Ctrl-d	Open/Close NERDTree
+Ctrl-n	create a new tab\n
+Ctrl-j	switch to next tab\n
+Ctrl-p	switch to prev tab\n
+Ctrl-d	Open/Close NERDTree\n
 
-## Shout outs
+## Shoutouts
 
-Special thanks to gmarik for giving us Vundle, which is a package manager for Vim plugins!
+Special thanks to gmarik for giving us Vundle, which is a package manager for Vim plugins!\n
 Also a thankyou to scrooloose for the NERDTree plugin, and all the other contributors for other plugins for Vim.
 
 
