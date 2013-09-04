@@ -9,13 +9,11 @@ Since it's just a bash script, simply run to clone:
 ```
 $ git clone https://github.com/sunnypatel/vimPack ~/.vimPack
 ```
-	
-	And this to install everything:
-
-	```
-	$ cd ~/.vimPack
-	$ make
-	```
+And this to install everything:
+```
+$ cd ~/.vimPack
+$ make
+```
 
 ## Shortcuts
 These are a few shortcuts added to the vimrc file, if you choose to use the one provided.
