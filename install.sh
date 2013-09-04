@@ -13,7 +13,7 @@ if [ "$overwrite" == "y" ] || [ "$overwrite" == "yes" ] || [ "$overwrite" == "" 
 	echo "overwriting .vimrc"
 	cp vimrc ~/.vimrc
 
-	echo "\n Run vim and enter :BundleInstall command, this will install all plugins"
+	echo "Run vim and enter :BundleInstall command, this will install all plugins"
 else
 	echo "skipping .vimrc"
 fi
