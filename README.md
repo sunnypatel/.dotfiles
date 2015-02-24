@@ -35,3 +35,7 @@ Also a thankyou to scrooloose for the NERDTree plugin, and all the other contrib
 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sunnypatel/vimpack/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
