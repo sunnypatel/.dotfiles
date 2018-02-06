@@ -1,0 +1,1 @@
+linkFramework='ln -s $BMW-ANGULAR-FRAMEWORK-PATH/dist ${cwd}/node_modules/bmw-angular-framework'
