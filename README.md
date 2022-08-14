@@ -8,12 +8,11 @@ which can make developers life easier but I am simply installing and configuring
 
 Since it's just a bash script, simply run to clone:
 ```
-$ git clone https://github.com/sunnypatel/vimPack ~/.vimPack
+git clone https://github.com/sunnypatel/vimPack ~/.vimPack
 ```
 And this to install everything:
 ```
-$ cd ~/.vimPack
-$ make
+cd ~/.vimPack && make
 ```
 
 ## Shortcuts
@@ -32,9 +31,6 @@ Ctrl-d  -  	Open/Close NERDTree
 
 Special thanks to gmarik for giving us Vundle, which is a package manager for Vim plugins!\n
 Also a thankyou to scrooloose for the NERDTree plugin, and all the other contributors for other plugins for Vim.
-
-
-
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sunnypatel/vimpack/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
