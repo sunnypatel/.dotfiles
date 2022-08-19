@@ -3,6 +3,7 @@
  syntax on
  set nu
 
+
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 
@@ -52,3 +53,6 @@
  autocmd vimenter * if !argc() | NERDTree | endif
  " Close vim if the only window left open is a NERDTree
  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+ " Let NerdTree show hidden files
+ let NERDTreeShowHidden=1
