@@ -1,7 +1,5 @@
 ## ✨ My environment setup ✨
 
----
-
 ![Preview](https://i.imgur.com/WC26rrD.png)
 
 ### Install
