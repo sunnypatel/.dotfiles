@@ -1,6 +1,6 @@
-## Boot-up setup
+## ✨ My environment setup ✨
 
-✨ My environment setup ✨
+---
 
 ![Preview](https://i.imgur.com/WC26rrD.png)
 
