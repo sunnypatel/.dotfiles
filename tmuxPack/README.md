@@ -1,0 +1,7 @@
+## tmux.conf
+
+### Installation
+
+```
+make
+```
