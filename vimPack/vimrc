@@ -24,10 +24,11 @@
  " non github repos
  Bundle 'git://git.wincent.com/command-t.git'
  " git repos on your local machine (ie. when working on your own plugin)
- Bundle 'file:///Users/gmarik/path/to/plugin'
+ " Bundle 'file:///Users/gmarik/path/to/plugin'
  " ...
  " NERDTree Pluin
  Bundle 'scrooloose/nerdtree'
+ Bundle 'prettier/vim-prettier'
 
  filetype plugin indent on     " required!
  "
@@ -56,3 +57,8 @@
 
  " Let NerdTree show hidden files
  let NERDTreeShowHidden=1
+
+ " when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 0
+
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html PrettierAsync
