@@ -2,7 +2,7 @@
  filetype off                   " required!
  syntax on
  set nu
-
+ set re=0
 
  set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
