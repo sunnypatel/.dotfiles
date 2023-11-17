@@ -5,13 +5,7 @@
  set re=0
 
  set rtp+=~/.vim/bundle/vundle/
- set runtimepath^=~/.vim/bundle/ctrlp.vim
-
- call plug#begin()
- " Plug 'tpope/vim-sensible'
- " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
- " Plug 'junegunn/fzf.vim'
- call plug#end()
+ " set runtimepath^=~/.vim/bundle/ctrlp.vim
 
  call vundle#rc()
 
@@ -28,7 +22,7 @@
  " Bundle 'tpope/vim-rails.git'
  " vim-scripts repos
  Bundle 'L9'
- Bundle 'FuzzyFinder'
+ " Bundle 'FuzzyFinder'
  " non github repos
  Bundle 'git://git.wincent.com/command-t.git'
  " git repos on your local machine (ie. when working on your own plugin)
@@ -37,6 +31,7 @@
  " NERDTree Pluin
  Bundle 'scrooloose/nerdtree'
  Bundle 'prettier/vim-prettier'
+ Plugin 'ctrlpvim/ctrlp.vim'
 
  filetype plugin indent on     " required!
  "
@@ -50,9 +45,9 @@
  " NOTE: comments after Bundle command are not allowed..
 
   " shortcut for new tab
- map <c-n> :tabnew<CR>
+ map <c-t> :tabnew<CR>
  " shortcut for nxt tab
- map <c-j> :tabn<CR>
+ map <c-n> :tabn<CR>
  " shortcut for prev tab
  map <c-k> :tabp<CR>
  " shortcut to toggle  NERDTree
