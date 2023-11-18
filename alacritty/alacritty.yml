@@ -1,0 +1,79 @@
+font:
+  size: 16
+  normal:
+    family: Mononoki Nerd Font 
+    style: Regular
+  bold:
+    family: Mononoki Nerd Font 
+    style: Bold
+  italic:
+    family: Mononoki Nerd Font 
+    style: Italic
+
+# Colors (SeaShells)
+# Source : https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/SeaShells.itermcolors
+# colors:
+#   primary:
+#     background: '0x1e2030'
+#     foreground: '0x7f85a3'
+
+#   cursor:
+#     text:   '0x7f85a3'
+#     cursor: '0x808080'
+
+#   normal:
+#     black:   '0x444a73'
+#     red:     '0xff5370'
+#     green:   '0x4fd6be'
+#     yellow:  '0xffc777'
+#     blue:    '0x3e68d7'
+#     magenta: '0xfc7b7b'
+#     cyan:    '0x86e1fc'
+#     white:   '0xd0d0d0'
+
+#   bright:
+#     black:   '0x828bb8'
+#     red:     '0xff98a4'
+#     green:   '0xc3e88d'
+#     yellow:  '0xffc777'
+#     blue:    '0x82aaff'
+#     magenta: '0xff966c'
+#     cyan:    '0xb4f9f8'
+#     white:   '0x5f8787'
+colors:
+  # Default colors
+  primary:
+    background: '#121c27'
+    foreground: '#d4d4d4'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#061822'
+      #cursor: '#feaf3c'
+    cursor: '#AeAeAe'
+
+  selection:
+    text: '#ffe9d7'
+    background: '#265b75'
+
+  # Normal colors
+  normal:
+    black: '#1d485f'
+    red: '#d16969'
+    green: '#6a9955'
+    yellow: '#dcdcaa'
+    blue: '#569cd6'
+    magenta: '#d16d9e'
+    cyan: '#4ec9b0'
+    white: '#cccccc'
+
+  # Bright colors
+  bright:
+    black: '#545d65'
+    red: '#dd998a'
+    green: '#739da8'
+    yellow: '#fedaae'
+    blue: '#0bc7e3'
+    magenta: '#c6e8f1'
+    cyan: '#97b9c0'
+    white: '#ffe9d7'
