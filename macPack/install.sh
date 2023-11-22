@@ -1,38 +1,56 @@
 #!/bin/bash
 
+
 # Install node via nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+if ! [ -x "$(command -v nvm)" ]; then
+  echo 'nvm is not installed.' >&2
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  exit 1
+fi
 
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew tap homebrew/cask
+if ! [ -x "$(command -v brew)" ]; then
+  echo 'Error: brew is not installed.' >&2
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Install tree
-brew install tree
-# Install Neovim
-brew install nvim
+  brew tap homebrew/cask
+  
+  # Install tree
+  brew install tree
 
-# Install NvChad
-# git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+  exit 1
+fi
 
-# --- LunarVim prerequisites start
+if ! [ -x "$(command -v nvim)" ]; then
+  echo 'Error: brew is not installed.' >&2
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Install LazyGit
-brew install lazygit
+  # Install Neovim
+  brew install nvim
 
-# Install Rust 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  # --- LunarVim prerequisites start
 
-# Install Pip
-python get-pip.py
+  # Install LazyGit
+  brew install lazygit
 
-# Install Mononoki Nerd font
-brew tap homebrew/cask-fonts
-brew cask install font-mononoki-nerd-font
+  # Install Rust 
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# --- LunarVim prerequisites end
+  # Install Pip
+  python get-pip.py
 
-# Install LunarNvim
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+  # Install Mononoki Nerd font
+  brew tap homebrew/cask-fonts
+  brew cask install font-mononoki-nerd-font
 
+  # --- LunarVim prerequisites end
+
+  # Install LunarNvim
+  LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+
+  # Install TokyoNight theme
+  git clone https://github.com/folke/tokyonight.nvim.git ./.tmp/tokyonight/
+
+  exit 1
+fi
 
