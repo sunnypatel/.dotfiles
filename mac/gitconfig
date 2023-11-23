@@ -1,3 +1,15 @@
+[user]
+	name = Sunny Patel
+	email = spatel2@paypal.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+	sslVerify = false
+	sslCAInfo = /usr/local/etc/openssl/certs/combined_cacerts.pem
+
 
 # https://gist.github.com/codexico/2a34c0d599f3af93b46f
 

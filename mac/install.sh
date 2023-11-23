@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Configure git
+cp ./gitconfig $HOME/.gitconfig
 
 # Install node via nvm
 if ! [ -x "$(command -v nvm)" ]; then
@@ -16,14 +18,14 @@ if ! [ -x "$(command -v brew)" ]; then
   # --- Brew packages ---
   brew tap homebrew/cask
  
-  brew install bat 
+  # brew install bat 
   brew install tree
 
   exit 1
 fi
 
 if ! [ -x "$(command -v nvim)" ]; then
-  echo 'Error: brew is not installed.' >&2
+  echo 'Error: nvim is not installed.' >&2
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   # Install Neovim
