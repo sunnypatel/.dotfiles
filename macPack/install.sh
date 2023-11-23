@@ -13,9 +13,10 @@ if ! [ -x "$(command -v brew)" ]; then
   echo 'Error: brew is not installed.' >&2
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+  # --- Brew packages ---
   brew tap homebrew/cask
-  
-  # Install tree
+ 
+  brew install bat 
   brew install tree
 
   exit 1
