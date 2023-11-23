@@ -1,5 +1,5 @@
 # editors
-*.swp
+*.sw?
 
 # cloned repos
 alacritty/alacritty-theme
