@@ -8,7 +8,6 @@ installNvim=true
 if [ "$installNvim" = FALSE ]; then
   
   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-  #git clone https://github.com/gmarik/vundle.git ~/testVimPack
   
   echo "Do you want to overwrite your .vimrc? [y/n]"
   read overwrite

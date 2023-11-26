@@ -1,21 +1,17 @@
 install
-	# macPack
-	make install-macPack
-	# vim
+	make install-mac
 	make install-vim
-	# tmux
 	make install-tmux
-  # alacritty
 	make install-alacritty
 
-install-macPack
-	make -f macPack/makefile install
+install-mac
+	make -f mac/makefile install
 
 install-vim
-	make -f vimPack/makefile install
+	make -f vim/makefile install
 
 install-tmux
-	make -f tmuxPack/makefile install
+	make -f tmux/makefile install
 
 install-alacritty
 	make -f alacritty/makefile install

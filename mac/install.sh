@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")"
+SCRIPT_DIR="$(pwd)"
 
 # Configure git
-cp ./gitconfig $HOME/.gitconfig
+cp $SCRIPT_DIR/gitconfig $HOME/.gitconfig
 
 # Install node via nvm
 if ! [ -x "$(command -v nvm)" ]; then
@@ -25,7 +28,7 @@ if ! [ -x "$(command -v brew)" ]; then
 fi
 
 if ! [ -x "$(command -v nvim)" ]; then
-  echo 'Error: nvim is not installed.' >&2
+  echo 'installing nvm' >&2
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   # Install Neovim
@@ -35,6 +38,9 @@ if ! [ -x "$(command -v nvim)" ]; then
 
   # Install LazyGit
   brew install lazygit
+
+  # Install Trash
+  brew install trash
 
   # Install Rust 
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -54,6 +60,10 @@ if ! [ -x "$(command -v nvim)" ]; then
   # Install TokyoNight theme
   git clone https://github.com/folke/tokyonight.nvim.git ./.tmp/tokyonight/
 
+  # Install Prettier
+  if [ -x "$(command -v npm)"]; then
+    npm i -G prettier
+  fi
   exit 1
 fi
 

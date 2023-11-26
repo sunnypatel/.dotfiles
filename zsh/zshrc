@@ -122,3 +122,8 @@ alias gb="git branch --sort=-committerdate"
 
 # LunerVim
 alias vim=/Users/sunny/.local/bin/lvim
+
+# Update PATH
+PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+# brew install make 
+PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
