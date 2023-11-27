@@ -51,7 +51,10 @@ else
   
     # Install LunarNvim
     LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
-  
+    LVIM_CONFIG_PATH=$HOME/.config/lvim/
+    mkdir -p $LVIM_CONFIG_PATH
+    rm -rf $LVIM_CONFIG_PATH/config.lua
+    ln -s $SCRIPT_DIR/config.lua $LVIM_CONFIG_PATH/config.lua
     # Install TokyoNight theme
     git clone https://github.com/folke/tokyonight.nvim.git ./.tmp/tokyonight/
   
