@@ -127,3 +127,6 @@ alias vim=/Users/sunny/.local/bin/lvim
 PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 # brew install make 
 PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+# NODE_PATH
+export NODE_PATH=$NODE_PATH:`npm root -g`
+
