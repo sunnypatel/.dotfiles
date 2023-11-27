@@ -1,18 +1,17 @@
-install
-	make install-mac
-	make install-vim
-	make install-tmux
-	make install-alacritty
+install: install-mac install-zsh install-vim install-tmux install-alacritty
 
-install-mac
+install-mac:
 	make -f mac/makefile install
 
-install-vim
+install-vim:
 	make -f vim/makefile install
 
-install-tmux
+install-tmux:
 	make -f tmux/makefile install
 
-install-alacritty
+install-alacritty:
 	make -f alacritty/makefile install
+
+install-zsh:
+	make -f zsh/makefile install
 
