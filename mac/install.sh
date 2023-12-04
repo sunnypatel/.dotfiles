@@ -62,7 +62,7 @@ if ! [ -x "$(command -v nvim)" ]; then
 
   # Install Prettier
   if [ -x "$(command -v npm)"]; then
-    npm i -G prettier
+    npm i -g prettier
   fi
   exit 1
 fi

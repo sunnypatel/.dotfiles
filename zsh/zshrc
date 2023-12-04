@@ -113,20 +113,27 @@ export EDITOR="vim"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# Configuration for node to trust the PayPal Proxy Certificates
-# export NODE_EXTRA_CA_CERTS='/usr/local/etc/openssl/certs/paypal_proxy_cacerts.pem'
-# export CURL_SSL_BACKEND=secure-transport
-
-# Git alias
-alias gb="git branch --sort=-committerdate"
-
-# LunerVim
-alias vim=/Users/sunny/.local/bin/lvim
-
-# Update PATH
-PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-# brew install make 
-PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 # NODE_PATH
 export NODE_PATH=$NODE_PATH:`npm root -g`
 
+export BOOT_UP_PATH=$HOME/boot-up
+
+# ------ ALIAS
+alias gb="git branch --sort=-committerdate"
+
+# alias LunerVim
+alias vim=$HOME/.local/bin/lvim
+
+
+# ------ PATH
+
+# Update PATH for Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# brew install make 
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+export PATH=$HOME/.local/bin:$PATH
+export PATH="$(npm bin):$PATH"
+
+# ------ PAYPAL
+source $BOOT_UP_PATH/paypal/paypalrc

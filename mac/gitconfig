@@ -48,11 +48,6 @@
 	attributesfile = ~/.gitattributes
 
 
-[user]
-  name = João Guilherme
-  email = hi@guicheffer.me
-
-
 [alias]
 
 	# List all aliases, only the names
