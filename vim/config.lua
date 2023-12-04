@@ -51,24 +51,3 @@ lvim.format_on_save.enabled = true
 
 -- Auto change to current directory
 vim.opt.autochdir = true
-
--- prettier
---   "MunifTanjim/prettier.nvim",
-
--- require "prettier".setup({
---   bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
---   filetypes = {
---     "css",
---     "graphql",
---     "html",
---     "javascript",
---     "javascriptreact",
---     "json",
---     "less",
---     "markdown",
---     "scss",
---     "typescript",
---     "typescriptreact",
---     "yaml",
---   },
--- })
