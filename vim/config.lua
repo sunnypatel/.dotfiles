@@ -3,6 +3,10 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
+lvim.builtin.telescope.defaults.layout_config.width = 200
+lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 120
+lvim.builtin.telescope.defaults.layout_strategy = "flex"
+
 lvim.plugins = {
   "norcalli/nvim-colorizer.lua",
   {
@@ -16,15 +20,31 @@ lvim.plugins = {
 -- colorizer plugin for color highlighting
 require 'colorizer'.setup()
 
+lvim.builtin.treesitter.ensure_installed = {
+  "bash",
+  "c",
+  "javascript",
+  "json",
+  "lua",
+  "python",
+  "typescript",
+  "tsx",
+  "css",
+  "rust",
+  "java",
+  "yaml",
+  "go",
+  "hcl",
+  "markdown"
+}
+
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { name = "black" },
   {
-    name = "prettier",
+    name = "prettierd",
     ---@usage arguments to pass to the formatter
     -- these cannot contain whitespace
-    -- options such as `--line-width 80` become either `{"--line-width", "80"}` or `{"--line-width=80"}`
-    args = { "--print-width", "100" },
     ---@usage only start in these filetypes, by default it will attach to all filetypes it supports
     filetypes = { "typescript", "typescriptreact" },
   },
