@@ -12,6 +12,8 @@ if ! [ -x "$(command -v brew)" ]; then
  
   brew install tree
 
+  brew install tmux
+
   exit 1
 else
   echo 'brew already installed'

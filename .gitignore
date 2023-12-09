@@ -1,9 +1,6 @@
 # editors
 *.sw?
 
-# cloned repos
-alacritty/alacritty-theme
-
 # OS files
 **/.DS_Store
 **/.tmp

@@ -1,5 +1,6 @@
 unset CURL_SSL_BACKEND
 
+cacert=/usr/local/etc/openssl/certs/cacert.pem
+
 # Configuration for node to trust the PayPal Proxy Certificates
 export NODE_EXTRA_CA_CERTS='/usr/local/etc/openssl/certs/paypal_proxy_cacerts.pem'
-
