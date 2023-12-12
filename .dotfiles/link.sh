@@ -3,8 +3,10 @@
 # Import config path vars
 . ./conf_paths.sh
 
-# link all config folders
 mkdir -p $HOME/.config
+mkdir -p $HOME/.config/alacritty
+
+# link all config folders
 ln -s $SCRIPT_DIR/.config/lvim $LVIM_CONF_PATH
 ln -s $SCRIPT_DIR/.config/paypal $PAYPAL_CONF_PATH
 
