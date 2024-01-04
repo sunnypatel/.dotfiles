@@ -8,7 +8,6 @@ lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 120
 lvim.builtin.telescope.defaults.layout_strategy = "flex"
 lvim.builtin.telescope.defaults.path_display = { "absolute" }
 
--- Format on save
 lvim.format_on_save.enabled = true
 
 lvim.plugins = {
@@ -48,8 +47,22 @@ lvim.plugins = {
         auto_session_suppress_dirs = { "~/", "~/Documents", "~/Downloads", "/" },
       }
     end
-  }
+  },
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require("hop").setup()
+      vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+    end,
+  },
 }
+
+-- Keybindings
+lvim.keys.normal_mode["|"] = ":vsplit<CR>"
+lvim.keys.normal_mode["-"] = ":split<CR>"
+lvim.keys.normal_mode["<C-b>"] = ":b#"
 
 -- colorizer plugin for color highlighting
 require 'colorizer'.setup()
@@ -103,4 +116,4 @@ code_actions.setup {
 }
 
 -- Auto change to current directory
-vim.opt.autochdir = true
+-- vim.opt.autochdir = true
