@@ -70,7 +70,6 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,8 +108,15 @@ export TERM="xterm-256color"
 #export ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 
 # Configuration to load nvm - node version manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# plugins=(zsh-nvm git npm)
+
+nvm() {
+  echo "🚨 NVM not loaded! Loading now..."
+  unset -f nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+  nvm "$@"
+}
 
 # NODE_PATH
 export NODE_PATH=$NODE_PATH:`npm root -g`
@@ -123,6 +129,11 @@ alias gb="git branch --sort=-committerdate"
 # alias LunerVim
 alias vim=$HOME/.local/bin/lvim
 
+# ----- ZSH FUNCTIONS
+# timezsh() {
+#   shell=${1-$SHELL}
+#   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+# }
 
 # ------ PATH
 
@@ -137,3 +148,5 @@ export PATH="$(npm bin):$PATH"
 # ------ PAYPAL
 # looks for paypal specific configs at $HOME/.config/paypal
 [ -s "$HOME/.config/paypal" ] && source $HOME/.config/paypal/.paypalrc
+
+alias axoSdkOverride="cp -r /Users/spatel2/github.paypal/PayPal-R/core-web-components-copy2/sdk/dist/* ./"
