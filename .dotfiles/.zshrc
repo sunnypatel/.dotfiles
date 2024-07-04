@@ -138,8 +138,4 @@ export PATH="$(npm bin):$PATH"
 alias axoSdkOverride="cp -r /Users/spatel2/github.paypal/PayPal-R/core-web-components-copy2/sdk/dist/* ./"
 
 # fnm
-FNM_PATH="/Users/sunny/Library/Application Support/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/Users/sunny/Library/Application Support/fnm:$PATH"
-  eval "`fnm env --use-on-cd`"
-fi
+eval "`fnm env --use-on-cd`"
