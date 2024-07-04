@@ -107,17 +107,6 @@ export TERM="xterm-256color"
 #export ZSH_TMUX_FIXTERM=true
 #export ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 
-# Configuration to load nvm - node version manager
-# plugins=(zsh-nvm git npm)
-
-nvm() {
-  echo "🚨 NVM not loaded! Loading now..."
-  unset -f nvm
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-  nvm "$@"
-}
-
 # NODE_PATH
 export NODE_PATH=$NODE_PATH:`npm root -g`
 
@@ -136,17 +125,21 @@ alias vim=$HOME/.local/bin/lvim
 # }
 
 # ------ PATH
-
-# Update PATH for Ruby
+# ------ PATH configurations
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-# brew install make 
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
-export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$(npm bin):$PATH"
 
 # ------ PAYPAL
 # looks for paypal specific configs at $HOME/.config/paypal
-[ -s "$HOME/.config/paypal" ] && source $HOME/.config/paypal/.paypalrc
+[[ -s "$HOME/.config/paypal/.paypalrc" ]] && source "$HOME/.config/paypal/.paypalrc"
 
 alias axoSdkOverride="cp -r /Users/spatel2/github.paypal/PayPal-R/core-web-components-copy2/sdk/dist/* ./"
+
+# fnm
+FNM_PATH="/Users/sunny/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/sunny/Library/Application Support/fnm:$PATH"
+  eval "`fnm env --use-on-cd`"
+fi

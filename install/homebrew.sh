@@ -9,9 +9,7 @@ if ! [ -x "$(command -v brew)" ]; then
 
   # --- Brew packages ---
   brew tap homebrew/cask
-  brew install tmux
-  brew install the_silver_searcher
-  brew install tree
+  brew install tmux fnm the_silver_searcher tree
 
   exit 1
 else
