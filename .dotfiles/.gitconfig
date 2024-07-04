@@ -1,6 +1,6 @@
 [user]
 	name = Sunny Patel
-	email = spatel2@paypal.com
+	email = du.svp28@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

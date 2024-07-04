@@ -3,18 +3,15 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-lvim.builtin.telescope.defaults.layout_strategy = "ivy"
 lvim.builtin.telescope.defaults.layout_config.width = 200
 lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 120
+lvim.builtin.telescope.defaults.layout_strategy = "flex"
 lvim.builtin.telescope.defaults.path_display = { "absolute" }
 
 lvim.format_on_save.enabled = true
 
 lvim.plugins = {
-  {
-    "norcalli/nvim-colorizer.lua",
-    event = "BufRead",
-  },
+  "norcalli/nvim-colorizer.lua",
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -47,15 +44,18 @@ lvim.plugins = {
     config = function()
       require("auto-session").setup {
         log_level = "error",
-<<<<<<< Updated upstream
         auto_session_suppress_dirs = { "~/", "~/Documents", "~/Downloads", "/" },
-        auto_save_enabled = true,
-        auto_restore_enabled = true
-=======
-        auto_session_suppress_dirs = { vim.fn.expand("~"), "/tmp", "/" },
->>>>>>> Stashed changes
       }
     end
+  },
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require("hop").setup()
+      vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+    end,
   },
 }
 
@@ -68,31 +68,40 @@ lvim.keys.normal_mode["<C-b>"] = ":b#"
 require 'colorizer'.setup()
 
 lvim.builtin.treesitter.ensure_installed = {
-  "typescript",
-  "tsx",
+  "bash",
+  "c",
   "javascript",
   "json",
   "lua",
+  "python",
+  "typescript",
+  "tsx",
+  "css",
+  "rust",
+  "java",
   "yaml",
+  "go",
+  "hcl",
+  "markdown",
+  "dart",
+  "markdown_inline"
 }
-
-lvim.builtin.treesitter.highlight.enable = true
-
-lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
-  return server ~= "tsserver"
-end, lvim.lsp.automatic_configuration.skipped_servers)
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
+  { name = "black" },
   {
     name = "prettierd",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespace
+    ---@usage only start in these filetypes, by default it will attach to all filetypes it supports
     filetypes = { "typescript", "typescriptreact", 'javascript', 'javascriptreact' },
   },
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
-<<<<<<< Updated upstream
 linters.setup {
+  { name = "flake8" },
   {
     name = "shellcheck",
     args = { "--severity", "warning" },
@@ -101,28 +110,10 @@ linters.setup {
 
 local code_actions = require "lvim.lsp.null-ls.code_actions"
 code_actions.setup {
-  -- {
-  --   name = "proselint",
-  -- },
+  {
+    name = "proselint",
+  },
 }
-=======
-linters.setup {}
-
-local code_actions = require "lvim.lsp.null-ls.code_actions"
-code_actions.setup {}
-
-lvim.builtin.alpha.active = false
-lvim.builtin.terminal.active = false
-
-vim.api.nvim_create_autocmd("BufReadPre", {
-  pattern = "*",
-  callback = function()
-    if vim.fn.getfsize(vim.fn.expand("%")) > 1024 * 1024 then
-      vim.cmd("colorscheme default")
-    end
-  end,
-})
->>>>>>> Stashed changes
 
 -- Auto change to current directory
 -- vim.opt.autochdir = true
