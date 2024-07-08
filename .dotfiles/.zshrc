@@ -87,6 +87,9 @@ else
   export EDITOR='mvim'
 fi
 
+# fnm
+eval "`fnm env --use-on-cd`"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -107,9 +110,6 @@ export TERM="xterm-256color"
 #export ZSH_TMUX_FIXTERM=true
 #export ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 
-# NODE_PATH
-export NODE_PATH=$NODE_PATH:`npm root -g`
-
 export BOOT_UP_PATH=$HOME/boot-up
 
 # ------ ALIAS
@@ -125,11 +125,13 @@ alias vim=$HOME/.local/bin/lvim
 # }
 
 # ------ PATH
-# ------ PATH configurations
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$(npm bin):$PATH"
+
+# ------ NODE
+export NODE_PATH=$NODE_PATH:`npm root -g`
 
 # ------ PAYPAL
 # looks for paypal specific configs at $HOME/.config/paypal
@@ -137,5 +139,3 @@ export PATH="$(npm bin):$PATH"
 
 alias axoSdkOverride="cp -r /Users/spatel2/github.paypal/PayPal-R/core-web-components-copy2/sdk/dist/* ./"
 
-# fnm
-eval "`fnm env --use-on-cd`"
