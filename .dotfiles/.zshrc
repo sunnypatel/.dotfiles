@@ -131,11 +131,5 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$(npm bin):$PATH"
 
-# ------ PAYPAL
-# looks for paypal specific configs at $HOME/.config/paypal
-[[ -s "$HOME/.config/paypal" ]] && source "$HOME/.config/paypal/.paypalrc"
-
-alias axoSdkOverride="cp -r /Users/spatel2/github.paypal/PayPal-R/core-web-components-copy2/sdk/dist/* ./"
-
 # fnm
 eval "`fnm env --use-on-cd`"
